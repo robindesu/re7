@@ -1,12 +1,14 @@
 page-welcome {
   .splash-bg {
-    position: relative;
-    background: url('../assets/img/splashbg.png') no-repeat transparent;
+    position: absolute;
+    background: url('../assets/img/RE7bg.png') no-repeat transparent;
     background-size: cover;
-    height: 45%;
+    height: 100%;
+    width: 100%;
     z-index: 1;
     background-repeat: repeat-x;
     animation: animatedBackground 40s linear infinite;
+
   }
 
   @keyframes animatedBackground {
@@ -15,19 +17,24 @@ page-welcome {
   }
 
   .splash-info {
-    position: relative;
+    position: absolute;
+    top: 57%;
     z-index: 2;
     margin-top: -64px;
     text-align: center;
   }
   .splash-logo {
     margin: auto;
-    background: url('../assets/img/appicon.png') repeat transparent;
+    background: url('../assets/img/RE7.png') repeat transparent;
+    border-radius: 50%;
+    background-position: center;
     background-size: 100%;
     width: 128px;
     height: 128px;
   }
   .splash-intro {
+    color: white;
+    margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
     max-width: 80%;

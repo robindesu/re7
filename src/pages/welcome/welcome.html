@@ -5,9 +5,10 @@
     <div class="splash-intro">
       {{ 'WELCOME_INTRO' | translate }}
     </div>
+    <div padding>
+      <button ion-button block (click)="signup()">{{ 'SIGNUP' | translate }}</button>
+      <button ion-button block (click)="login()" class="login">{{ 'LOGIN' | translate }}</button>
+    </div>
   </div>
-  <div padding>
-    <button ion-button block (click)="signup()">{{ 'SIGNUP' | translate }}</button>
-    <button ion-button block (click)="login()" class="login">{{ 'LOGIN' | translate }}</button>
-  </div>
+
 </ion-content>
