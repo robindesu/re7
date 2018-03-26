@@ -4,6 +4,7 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { User } from '../../providers/providers';
 import { MainPage } from '../pages';
+import {Api} from '../../providers/api/api';
 
 @IonicPage()
 @Component({
@@ -25,7 +26,8 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
     public user: User,
     public toastCtrl: ToastController,
-    public translateService: TranslateService) {
+    public translateService: TranslateService,
+    public apiService: Api) {
 
     this.translateService.get('LOGIN_ERROR').subscribe((value) => {
       this.loginErrorString = value;
@@ -34,17 +36,28 @@ export class LoginPage {
 
   // Attempt to login in through our User service
   doLogin() {
-    this.user.login(this.account).subscribe((resp) => {
-      this.navCtrl.push(MainPage);
-    }, (err) => {
-      this.navCtrl.push(MainPage);
-      // Unable to log in
-      let toast = this.toastCtrl.create({
-        message: this.loginErrorString,
-        duration: 3000,
-        position: 'top'
-      });
-      toast.present();
+     let userTest = {
+       email: "jose@email.com",
+       password: "segredo"
+      };
+
+    this.apiService.post('/profile/session', userTest ).subscribe((res) => {
+      console.log(res);
     });
+
+
+
+    // this.user.login(this.account).subscribe((resp) => {
+    //   this.navCtrl.push(MainPage);
+    // }, (err) => {
+    //   this.navCtrl.push(MainPage);
+    //   // Unable to log in
+    //   let toast = this.toastCtrl.create({
+    //     message: this.loginErrorString,
+    //     duration: 3000,
+    //     position: 'top'
+    //   });
+    //   toast.present();
+    // });
   }
 }
