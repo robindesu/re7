@@ -40,11 +40,11 @@ export class LoginPage {
        email: "jose@email.com",
        password: "segredo"
       };
+      this.navCtrl.push(MainPage);
 
-    this.apiService.post('/profile/session', userTest ).subscribe((res) => {
-      console.log(res);
-    });
-
+    // this.apiService.post('/profile/session', userTest ).subscribe((res) => {
+    //   console.log(res);
+    // });
 
 
     // this.user.login(this.account).subscribe((resp) => {
