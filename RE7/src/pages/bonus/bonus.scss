@@ -1,0 +1,17 @@
+page-bonus {
+  .main-row{
+    .col-left{
+      background-color: $bluegreen;
+    }
+    .col-right{
+      background-color: $orange-call;
+    }
+  }
+  .store-list{
+    margin-top: 44%;
+  }
+  ion-icon{
+    font-size: 3rem;
+    color: $orange-calm;
+  }
+}

@@ -1,0 +1,57 @@
+.main-grid{
+  height: 100%;
+  .main-row {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 27%;
+    .col-left, .col-right{
+      color: white;
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      text-align: center;
+    }
+    .main-number{
+      font-size: 52px;
+      margin-top: 10px;
+    }
+  }
+  .content-row{
+    margin-top: 44%;
+  }
+}
+page-home {
+  .main-row{
+    .col-left{
+      background-color: $bluegreen;
+    }
+    .col-right{
+      background-color: $orange-call;
+    }
+  }
+  .main-card{
+    p{
+      margin-left: 16px;
+    }
+    .col-right{
+      display: flex;
+      justify-content: center;
+      flex-flow: column;
+      text-align: center;
+    }
+    #alarm{
+      padding-top: 16px;
+      font-size:5rem;
+      cursor: pointer;
+      color: $bluegreen;
+      &.active{
+        color: $orange-call;
+      }
+    }
+  }
+  .central-btn{
+    margin:auto;
+  }
+}
