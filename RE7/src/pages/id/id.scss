@@ -1,0 +1,38 @@
+page-id {
+  figcaption {
+    margin-top: 1em;
+  }
+
+  #qr-code {
+    background: url("/assets/qr-bg.png") no-repeat top center;
+    background-size: 240px;
+    display: block;
+    height: auto;
+    margin: 0 auto 2rem;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+
+    img {
+      display: inline-block;
+      padding: 45px 0;
+      width: 150px;
+    }
+  }
+
+  div.buttons {
+    overflow: hidden;
+
+    button {
+      float: left;
+    }
+
+    button + button {
+      float: right;
+    }
+  }
+
+  #bag {
+    margin-top: 5em;
+  }
+}
