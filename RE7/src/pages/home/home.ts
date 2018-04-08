@@ -19,6 +19,10 @@ export class HomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  openIdPage() {
+    this.navCtrl.push('IdPage');
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
   }

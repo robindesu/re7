@@ -14,23 +14,35 @@
 
 
 <ion-content padding>
-  <figure id="qr-code">
-    <img data-src="{{qr}}"/>
-    <figcaption>
-      Sua identificação acompanha a sacola de material reciclável a cada coleta.
-    </figcaption>
-  </figure>
+  <ion-card>
+    <figure id="qr-code">
+      <img data-src="{{qr}}"/>
+    </figure>
 
-  <div class="buttons">
-    <button ion-button icon-start>
-      <ion-icon name="ios-print-outline"></ion-icon>
-      Imprima
-    </button>
-    <button ion-button icon-end>
-      Receba em casa
-      <ion-icon name="ios-pricetags-outline"></ion-icon>
-    </button>
-  </div>
+    <ion-card-content>
+      <ion-card-title>
+        Esse QrCode é sua identificação, imprima e fixe na sacola especial para Reciclagem.
+      </ion-card-title>
+      <p>
+        CleanRobotics team has been developing a machine that uses cameras, sensors, and machine learning to ensure that garbage ends up in the landfill and recyclables don’t.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button icon-start>
+          <ion-icon name="ios-print-outline"></ion-icon>
+          Imprima
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button icon-end>
+          Receba
+          <ion-icon name="ios-pricetags-outline"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 
   <figure id="bag">
     <img src="/assets/imgs/bag.png"/>
