@@ -14,6 +14,7 @@
 
 
 <ion-content padding>
+  <!--// Code-->
   <ion-card>
     <figure id="qr-code">
       <img data-src="{{qr}}"/>
@@ -24,7 +25,9 @@
         Esse QrCode é sua identificação, imprima e fixe na sacola especial para Reciclagem.
       </ion-card-title>
       <p>
-        CleanRobotics team has been developing a machine that uses cameras, sensors, and machine learning to ensure that garbage ends up in the landfill and recyclables don’t.
+        O QrCode vai te identificar na central de reciclagem para validar seus pontos.
+        Você pode imprimir o Código ou pedir para receber em casa.
+        Coloque o card no feixo da sacola e começe a reciclar.
       </p>
     </ion-card-content>
 
@@ -44,11 +47,33 @@
     </ion-row>
   </ion-card>
 
-  <figure id="bag">
-    <img src="/assets/imgs/bag.png"/>
-    <figcaption>
-      Uma sacola reciclada super legal, pra guardar seu lixo e tal...
-    </figcaption>
-  </figure>
+   <!--Bag-->
+  <ion-card>
+    <figure id="bag">
+      <img src="assets/imgs/bag.png"/>
+    </figure>
+
+
+    <ion-card-content>
+      <ion-card-title>
+        Essse é o jeito moderno de Reciclar. Uma sacola prática e retornável que te ajuda no processo
+      </ion-card-title>
+      <p>
+          Para ter a sacolar verifique com nossos parceiros ou prefeitura se fornecem a sacola.
+        Ou adiquira conosco quantas sacolas você precisar.
+      </p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+
+      <ion-col text-right>
+        <button ion-button icon-end>
+          Adiquirir
+          <ion-icon name="ios-basket-outline"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
 
 </ion-content>
