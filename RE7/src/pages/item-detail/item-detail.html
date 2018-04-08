@@ -1,18 +1,28 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ item.name }}</ion-title>
+    <ion-title>Suas Vantagens</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  <div class="item-profile" text-center #profilePic >
+    <img src="/assets/imgs/company.png"/>
   </div>
 
   <div class="item-detail" padding>
-    <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
+    <h2>Empresa Parceira 1</h2>
+    <p>Aqui você ganha descontos nos produtos A,B e C. 10% de desconto custa 100 pontos.
+    Selecione Desconto</p>
   </div>
+  <div>
+    <ion-row class="central-btn">
+      <button ion-button outline>
+        Selecionar Desconto
+      </button>
+    </ion-row>
+  </div>
+
 </ion-content>

@@ -22,21 +22,44 @@
       </ion-col>
       <ion-col  col-6 class="col-right">
         <span>Saldo com Descontos</span>
-        <div class="main-number">677</div>
+        <div class="main-number">777</div>
       </ion-col>
     </ion-row>
     <ion-row class="store-list">
       <ion-list>
         <ion-item-sliding>
-          <button ion-item>
+          <button ion-item (click)="openItem(item)">
             <ion-avatar item-start>
               <ion-icon name="pin"></ion-icon>
             </ion-avatar>
-            <h2>Store 1</h2>
-            <p>Market Store</p>
-            <ion-note item-end>10% for 100 points</ion-note>
+            <h2>Empresa 1</h2>
+            <p>Descontos nos produtos A,B e C.</p>
+            <ion-note item-end>10% </ion-note>
           </button>
-
+          <ion-item-options>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+          <button ion-item (click)="openItem(item)">
+            <ion-avatar item-start>
+              <ion-icon name="pin"></ion-icon>
+            </ion-avatar>
+            <h2>Empresa 2</h2>
+            <p>Descontos nos produtos A,B e C.</p>
+            <ion-note item-end>20% </ion-note>
+          </button>
+          <ion-item-options>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+          <button ion-item (click)="openItem(item)">
+            <ion-avatar item-start>
+              <ion-icon name="pin"></ion-icon>
+            </ion-avatar>
+            <h2>Empresa 3</h2>
+            <p>Descontos nos produtos A,B e C.</p>
+            <ion-note item-end>30% </ion-note>
+          </button>
           <ion-item-options>
           </ion-item-options>
         </ion-item-sliding>
