@@ -11,7 +11,7 @@ import { Settings } from '../providers/providers';
   template: `<ion-menu [content]="content">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Pages</ion-title>
+        <ion-title>{{"PAGES_TITLE" | translate }}</ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -32,19 +32,11 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
+    { title: 'Boas-Vindas', component: 'WelcomePage' },
+    { title: 'Inicie', component: 'TabsPage' },
+    { title: 'Ganhe', component: 'BonusPage' },
+    { title: 'Notícias', component: 'NewsPage' },
     { title: 'Coleta', component: 'CollectPage' },
-    { title: 'Início', component: 'TabsPage' },
-    { title: 'Tutorial', component: 'TutorialPage' },
-    { title: 'Welcome', component: 'WelcomePage' },
-    { title: 'Tabs', component: 'TabsPage' },
-    { title: 'Cards', component: 'CardsPage' },
-    { title: 'Content', component: 'ContentPage' },
-    { title: 'Login', component: 'LoginPage' },
-    { title: 'Signup', component: 'SignupPage' },
-    { title: 'Master Detail', component: 'ListMasterPage' },
-    { title: 'Menu', component: 'MenuPage' },
-    { title: 'Settings', component: 'SettingsPage' },
-    { title: 'Search', component: 'SearchPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
@@ -61,7 +53,7 @@ export class MyApp {
     // Set the default language for translation strings, and the current language.
     this.translate.setDefaultLang('en');
     const browserLang = this.translate.getBrowserLang();
-
+    console.log("Browser language", browserLang);
     if (browserLang) {
       if (browserLang === 'zh') {
         const browserCultureLang = this.translate.getBrowserCultureLang();
@@ -71,11 +63,13 @@ export class MyApp {
         } else if (browserCultureLang.match(/-TW|CHT|Hant/i)) {
           this.translate.use('zh-cmn-Hant');
         }
+      } else if (browserLang === 'pt') {
+        this.translate.use('pt-br');
       } else {
         this.translate.use(this.translate.getBrowserLang());
       }
     } else {
-      this.translate.use('pt-BR'); // Set your language here
+      this.translate.use('pt-br'); // Set your language here
     }
 
     this.translate.get(['BACK_BUTTON_TEXT']).subscribe(values => {
