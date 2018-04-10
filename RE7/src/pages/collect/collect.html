@@ -13,7 +13,11 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content [class.scanning]="scanning">
+  <div class="map" >
+    <img src="assets/imgs/map.png"/>
+  </div>
+
   <ion-row>
     <button ion-button outline (click)="scan()">Identificar</button>
   </ion-row>
