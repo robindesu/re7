@@ -17,20 +17,21 @@ page-welcome {
   }
 
   .splash-info {
-    position: absolute;
-    top: 57%;
+    position: relative;
+    top: 50%;
     z-index: 2;
     margin-top: -64px;
     text-align: center;
   }
   .splash-logo {
     margin: auto;
-    background: url('../assets/img/RE7.png') repeat transparent;
+    background: url('../assets/img/RE7.png') no-repeat transparent;
     border-radius: 50%;
     background-position: center;
+    background-color: white;
     background-size: 100%;
-    width: 128px;
-    height: 128px;
+    width: 228px;
+    height: 228px;
     margin-bottom: 2rem;
 
   }
