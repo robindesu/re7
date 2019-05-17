@@ -53,7 +53,11 @@ export class MyApp {
 
   ngOnInit(){
     this._requestsService.getData().subscribe(
-      data => { console.log( data)},
+      data => {console.log(data)},
+      err => {console.log(err)}
+    );
+    this._requestsService.updateData(1).subscribe(
+      data => { console.log(data)},
       err => {console.log(err)}
     );
   }
