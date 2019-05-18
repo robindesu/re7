@@ -17,6 +17,7 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 export class CollectPage {
 
   scanning: boolean;
+  code: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public qrScanner: QRScanner) {
@@ -42,9 +43,10 @@ export class CollectPage {
                     this.qrScanner.hide(); // hide camera preview
                     scanSub.unsubscribe(); // stop scanning
 
-                    this.navCtrl.push('CollectConfirmPage', {
-                      id: text
-                    });
+                    this.code = text;
+                    // this.navCtrl.push('CollectConfirmPage', {
+                    //   id: text
+                    // });
                 });
 
                 // show camera preview

@@ -26,39 +26,12 @@
       </ion-col>
     </ion-row>
     <ion-row class="content-row">
-      <ion-card class="main-card">
-        <ion-row>
-          <ion-col col-9>
-            <ion-card-header>
-              Próxima Coleta : 14/02
-            </ion-card-header>
-            <p> Sua coleta passará às 9Hs. Recolhe principalmente
-              VIDRO, PILHAS e METAIS.
-            </p>
-          </ion-col>
-          <ion-col col-3 class="col-right">
-            <span>Lembrar</span>
-            <ion-icon name="md-alarm"  md="md-alarm" id="alarm"
-                      (click)="alarmOn = !alarmOn"
-                      [ngClass]="{'active': alarmOn}"></ion-icon>
-          </ion-col>
-        </ion-row>
 
-        <ion-card-content>
-          <!-- Add card content here! -->
-        </ion-card-content>
-
-      </ion-card>
     </ion-row>
     <ion-row class="central-btn">
-      <button ion-button outline (click)="openIdPage()">
-        Minhas Informações
+      <button ion-button outline (click)="openContainer()">
+        Liberar Container
       </button>
     </ion-row>
-    <!--<ion-row class="central-btn">-->
-      <!--<button ion-button outline color="orange-call">-->
-        <!--Convidar Amigos-->
-      <!--</button>-->
-    <!--</ion-row>-->
   </ion-grid>
 </ion-content>

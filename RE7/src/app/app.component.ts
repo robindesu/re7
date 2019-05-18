@@ -7,7 +7,6 @@ import { Config, Nav, Platform } from 'ionic-angular';
 import { FirstRunPage } from '../pages/pages';
 import { Settings } from '../providers/providers';
 import {RequestsService} from "./requests.service";
-import {Observable} from "rxjs/Observable";
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -54,10 +53,6 @@ export class MyApp {
   ngOnInit(){
     this._requestsService.getData().subscribe(
       data => {console.log(data)},
-      err => {console.log(err)}
-    );
-    this._requestsService.updateData(1).subscribe(
-      data => { console.log(data)},
       err => {console.log(err)}
     );
   }

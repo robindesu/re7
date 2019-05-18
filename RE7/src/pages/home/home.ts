@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {RequestsService} from "../../app/requests.service";
 
 /**
  * Generated class for the HomePage page.
@@ -16,11 +17,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class HomePage {
   alarmOn = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private request: RequestsService) {
   }
 
-  openIdPage() {
-    this.navCtrl.push('IdPage');
+  openContainer() {
+    this.request.updateData(1).subscribe(data => {
+      console.log(data);
+    });
   }
 
   ionViewDidLoad() {
