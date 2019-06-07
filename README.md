@@ -1,4 +1,4 @@
-# re7
+# Re7
 Ionic Project for a Recycling App
 
 This app use The Ionic Super Starter template as a base structure
