@@ -3,7 +3,7 @@ Ionic Project for a Recycling App
 
 This app use The Ionic Super Starter template as a base structure
 
-###To install and run this project change the directortoy to RE7/
+##To install and run this project change the directortoy to RE7/
 Inside RE7/ you have other README from ionic starter template
 
 
